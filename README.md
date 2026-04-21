@@ -51,6 +51,7 @@ object-detection-project/
 ├── images/
 ├── requirements.txt
 └── README.md
+```
 ## Installation
 
 ### Create virtual environment
