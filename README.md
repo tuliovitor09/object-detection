@@ -51,3 +51,194 @@ object-detection-project/
 ├── images/
 ├── requirements.txt
 └── README.md
+## Installation
+
+### Create virtual environment
+
+```
+python -m venv venv
+```
+
+### Activate virtual environment
+
+#### Windows (CMD)
+
+```
+venv\Scripts\activate
+```
+
+#### PowerShell
+
+```
+.\venv\Scripts\Activate.ps1
+```
+
+---
+
+## Install dependencies
+
+```
+pip install fastapi uvicorn ultralytics opencv-python python-multipart
+```
+
+Or using requirements file:
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+## Running the API
+
+Start the FastAPI server:
+
+```
+uvicorn app:app --reload
+```
+
+Swagger documentation:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## API Endpoint
+
+### POST `/detect`
+
+Upload an image and receive detected objects.
+
+### Request
+
+`multipart/form-data`
+
+Field name:
+
+```
+file
+```
+
+---
+
+## Example Response
+
+```
+{
+  "filename": "image.jpg",
+  "detections": [
+    {
+      "object": "person",
+      "confidence": 0.94
+    },
+    {
+      "object": "cell phone",
+      "confidence": 0.88
+    }
+  ]
+}
+```
+
+---
+
+## Running Real-Time Webcam Detection
+
+```
+python webcam_detection.py
+```
+
+The webcam will open and start detecting objects in real time.
+
+Press:
+
+```
+Q
+```
+
+to exit.
+
+---
+
+## Example Features in Webcam Mode
+
+* live bounding boxes
+* object label
+* confidence score
+* FPS counter
+
+Example:
+
+```
+person 0.94
+FPS: 22.37
+```
+
+---
+
+## Learning Concepts Covered
+
+This project was created with a strong focus on learning the concepts behind the implementation.
+
+### Artificial Intelligence
+
+* pre-trained model usage
+* inference pipeline
+* confidence thresholds
+* object detection
+
+### Computer Vision
+
+* frame processing
+* image coordinates
+* bounding boxes (`x1, y1, x2, y2`)
+* real-time rendering
+
+### Backend / API
+
+* asynchronous endpoints
+* file upload handling
+* JSON response structure
+* FastAPI routing
+
+### Performance
+
+* frame processing time
+* FPS calculation
+* real-time inference optimization
+
+---
+
+## Future Improvements
+
+Planned next steps for this project:
+
+* object counting
+* object tracking
+* video file detection
+* model fine-tuning
+* cloud deployment
+* Docker containerization
+* streaming via WebSocket
+
+---
+
+## Purpose of This Project
+
+This repository is part of my transition and continuous learning journey into:
+
+* **Artificial Intelligence**
+* **Machine Learning Engineering**
+* **Python backend development**
+* **Computer Vision**
+
+The goal is to build real projects while deeply understanding the concepts behind them.
+
+---
+
+## Author
+
+**Tulio Vitor Sousa**
+
+Software Engineer | Transitioning into AI, Python and Machine Learning Engineering
