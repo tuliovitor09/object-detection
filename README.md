@@ -240,6 +240,6 @@ The goal is to build real projects while deeply understanding the concepts behin
 
 ## Author
 
-**Tulio Vitor Sousa**
+**Tulio Vitor**
 
-Software Engineer | Transitioning into AI, Python and Machine Learning Engineering
+Software Engineer | AI, Python and Machine Learning Engineering
